@@ -1,3 +1,4 @@
+import "../styles.css"
 import {app} from "./app";
 
 app.createProject("Sample Project", "This is a sample project description");

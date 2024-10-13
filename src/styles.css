@@ -1,0 +1,120 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  padding: 0;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* fonts */
+@font-face {
+  font-family: "l-spartan";
+  src: url("./resources/leaguespartan-bold-webfont.woff2") format("woff2"),
+    url("./resources/leaguespartan-bold-webfont.woff") format("woff");
+}
+
+/* basic style */
+body{
+  font-family: 'l-spartan';
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-block: 20px;
+  background-color: #F2F3F5;
+  border-bottom: 4px solid #2C8F79;
+
+  & > .nav-logo {
+    max-width: 70px;
+  }
+
+  & > .nav-title {
+    font-size: 40px;
+  color: #374958;
+
+
+    & > span {
+      color: #2C8F79;
+    }
+  }
+}
+
+.container {
+  background-color: #F2F3F5;
+  min-height: 100vh;
+  display: flex;
+
+  & > .left-side-container {
+    background-color: white;
+    flex: 0 0 400px;
+  color: #374958;
+
+
+    & > ul {
+      margin: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      & > span {
+        font-size: 28px;
+        border-bottom: 3px solid #2C8F79;
+      }
+
+      & > li {
+        list-style: none;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: red;
+}
