@@ -57,8 +57,8 @@ ul {
 }
 
 /* basic style */
-body{
-  font-family: 'l-spartan';
+body {
+  font-family: "l-spartan";
 }
 
 nav {
@@ -67,8 +67,8 @@ nav {
   align-items: center;
   gap: 10px;
   padding-block: 20px;
-  background-color: #F2F3F5;
-  border-bottom: 4px solid #2C8F79;
+  background-color: #f2f3f5;
+  border-bottom: 4px solid #2c8f79;
 
   & > .nav-logo {
     max-width: 70px;
@@ -76,25 +76,23 @@ nav {
 
   & > .nav-title {
     font-size: 40px;
-  color: #374958;
-
+    color: #374958;
 
     & > span {
-      color: #2C8F79;
+      color: #2c8f79;
     }
   }
 }
 
 .container {
-  background-color: #F2F3F5;
+  background-color: #f2f3f5;
   min-height: 100vh;
   display: flex;
 
   & > .left-side-container {
     background-color: white;
     flex: 0 0 400px;
-  color: #374958;
-
+    color: #374958;
 
     & > ul {
       margin: 30px 24px;
@@ -102,14 +100,44 @@ nav {
       flex-direction: column;
       gap: 15px;
 
+      &.projects {
+        > li {
+          position: relative;
+          padding-left: 50px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            width: 32px; /* Width of the image */
+            height: 32px;
+            background-image: url("./resources/folder.svg"); /* Path to the image */
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+
       & > span {
         font-size: 28px;
-        border-bottom: 3px solid #2C8F79;
+        border-bottom: 3px solid #2c8f79;
       }
 
       & > li {
         list-style: none;
         font-size: 16px;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:hover {
+          background-color: #737d8559;
+        }
+
+        > img {
+          width: 32px;
+        }
       }
     }
   }
@@ -117,4 +145,16 @@ nav {
 
 footer {
   background-color: red;
+}
+
+
+/* utility classes to manipulate styles from js */
+
+.active {
+  background-color: #50f1cf7a;
+  border-left: 3px solid #2c8f79;
+
+  &:hover {
+    background-color: #50f1cf7a !important; 
+  }
 }
