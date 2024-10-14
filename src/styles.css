@@ -141,12 +141,41 @@ nav {
       }
     }
   }
+
+  & > .right-side-container {
+    padding: 40px 30px;
+    flex: 1 0;
+
+    & > .container-title {
+      background-color: #2c8f79;
+      color: white;
+      font-size: 36px;
+      padding: 10px;
+    }
+
+    &> .add-task-btn {
+      background-color: unset;
+      border: unset;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 10px;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: #737d8559;
+      }
+
+      &>img {
+        width: 36px;
+      }
+    }
+  }
 }
 
 footer {
   background-color: red;
 }
-
 
 /* utility classes to manipulate styles from js */
 
@@ -155,6 +184,6 @@ footer {
   border-left: 3px solid #2c8f79;
 
   &:hover {
-    background-color: #50f1cf7a !important; 
+    background-color: #50f1cf7a !important;
   }
 }
