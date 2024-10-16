@@ -170,6 +170,16 @@ nav {
         width: 36px;
       }
     }
+
+    &> .tasks {
+      & > li {
+        display: flex;
+        align-items: center;
+        & > img {
+          width: 32px;
+        }
+      }
+    }
   }
 }
 
