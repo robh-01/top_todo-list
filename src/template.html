@@ -6,6 +6,21 @@
     <title>Todo List</title>
   </head>
   <body>
+    <div class="add-project-form">
+      <form action="">
+        <label for="project-name">Project Name:</label>
+        <input id="project-name" type="text" name="project-name" />
+        <br />
+        <label for="project-description">Description:</label>
+        <input
+          type="text"
+          id="project-description"
+          name="project-description"
+        />
+        <br />
+        <button class="submit-project-btn" type="button">Add</button>
+      </form>
+    </div>
     <nav>
       <img src="./resources/icons8-done.svg" alt="" class="nav-logo" />
       <p class="nav-title">on<span>List</span></p>
@@ -14,22 +29,30 @@
       <div class="left-side-container">
         <ul class="home">
           <span class="title">Home</span>
-          <li class="active">
+          <li data-tab="1">
             <img src="./resources/list.png" alt="" /><span>All Tasks</span>
           </li>
-          <li><img src="./resources/today.png" alt="" /><span>Today</span></li>
-          <li>
+          <li data-tab="2">
+            <img src="./resources/today.png" alt="" /><span>Today</span>
+          </li>
+          <li data-tab="3">
             <img src="./resources/next-seven-days.png" alt="" /><span
               >Next 7 Days</span
             >
           </li>
         </ul>
-        <ul class="projects">
+        <ul class="project-container">
           <span class="title">Projects</span>
-          <li class="active"><span>project2</span></li>
-          <li><span>project1</span></li>
-          <li><span>project3</span></li>
-          <li><span>project3</span></li>
+          <button class="add-project-btn">
+            <img src="./resources/plus.svg" alt="" />
+            Add New Project
+          </button>
+          <ul class="projects">
+            <li><span>project2</span></li>
+            <li><span>project1</span></li>
+            <li><span>project3</span></li>
+            <li><span>project3</span></li>
+          </ul>
         </ul>
       </div>
       <div class="right-side-container">
@@ -39,19 +62,20 @@
           Add Task
         </button>
         <ul class="tasks">
-          <li>
+          <!-- This is the structure for the task-item to be added from the dom.js file.
+            this is here so that styling can be easy as we can directly look the classes in this 
+            file and target them rather than having to figure out the classes from ui.js file -->
+          <!-- <li>
             <input type="checkbox" name="" id="" />
             <p class="task-details">
-              <!-- <del> -->
-              <span>Task Name</span><br>
+              <span>Task Name</span><br />
               <span>here is the task details...</span>
-              <!-- </del> -->
             </p>
             <p class="date">Date</p>
             <img src="./resources/pen.svg" alt="" />
             <img src="./resources/dustbin.png" alt="" />
           </li>
-          <li></li>
+          <li></li> -->
         </ul>
       </div>
     </div>

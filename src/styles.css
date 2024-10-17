@@ -100,30 +100,53 @@ nav {
       flex-direction: column;
       gap: 15px;
 
-      &.projects {
-        > li {
-          position: relative;
-          padding-left: 50px;
+      &.project-container {
+        & > span {
+          font-size: 28px;
+          border-bottom: 3px solid #2c8f79;
+        }
 
-          &::before {
-            content: "";
-            position: absolute;
-            left: 8px;
-            width: 32px; /* Width of the image */
-            height: 32px;
-            background-image: url("./resources/folder.svg"); /* Path to the image */
-            background-size: cover;
-            background-repeat: no-repeat;
+        & > .add-project-btn {
+          background-color: unset;
+          border: unset;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 6px 10px;
+          margin-top: 10px;
+
+          &:hover {
+            background-color: #737d8559;
+          }
+
+          & > img {
+            width: 36px;
+          }
+        }
+        > .projects {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          & > li {
+            list-style: none;
+            position: relative;
+            padding-left: 50px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 8px;
+              width: 32px; /* Width of the image */
+              height: 32px;
+              background-image: url("./resources/folder.svg"); /* Path to the image */
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
           }
         }
       }
 
-      & > span {
-        font-size: 28px;
-        border-bottom: 3px solid #2c8f79;
-      }
-
-      & > li {
+      & li {
         list-style: none;
         font-size: 16px;
         padding: 8px 12px;
@@ -153,7 +176,7 @@ nav {
       padding: 10px;
     }
 
-    &> .add-task-btn {
+    & > .add-task-btn {
       background-color: unset;
       border: unset;
       display: flex;
@@ -166,12 +189,12 @@ nav {
         background-color: #737d8559;
       }
 
-      &>img {
+      & > img {
         width: 36px;
       }
     }
 
-    &> .tasks {
+    & > .tasks {
       & > li {
         display: flex;
         align-items: center;
